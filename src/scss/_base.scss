@@ -24,7 +24,14 @@ html {
   font-size: rem($html-font-size);
 }
 
+body {
+  font-size: rem(16px);
+  font-family: $font-poppins;
+  color: $color-text-grey;
+}
+
 .wrapper {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -58,4 +65,22 @@ button {
 
 ul {
   list-style-type: none;
+}
+
+.container {
+  width: 100%;
+  max-width: rem(1440px);
+  margin: 0 auto;
+  padding-right: rem(120px);
+  padding-left: rem(120px);
+
+  @media only screen and (max-width: $bp-medium) {
+    padding-right: rem(80px);
+    padding-left: rem(80px);
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding-right: rem(48px);
+    padding-left: rem(48px);
+  }
 }

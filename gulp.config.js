@@ -8,6 +8,7 @@ export default {
     js: `${buildFolder}/js/`,
     images: `${buildFolder}/images/`,
     svg: `${buildFolder}/icons/`,
+    fonts: `${buildFolder}/fonts/`,
   },
   src: {
     html: `${sourceFolder}/*.html`,
@@ -16,6 +17,7 @@ export default {
     images: `${sourceFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
     svgImages: `${sourceFolder}/images/**/*.svg`,
     svg: `${sourceFolder}/icons/svg/*.svg`,
+    fonts: `${sourceFolder}/fonts/*.*`,
   },
   watch: {
     html: `${sourceFolder}/**/*.html`,
@@ -23,7 +25,7 @@ export default {
     js: `${sourceFolder}/js/**/*.js`,
     images: `${sourceFolder}/images/**/*.{jpg,jpeg,png,gif,webp,svg}`,
     svg: `${sourceFolder}/icons/svg/*.svg`,
-    files: `${sourceFolder}/files/**/*.*`,
+    fonts: `${sourceFolder}/fonts/*.*`,
   },
   clear: buildFolder,
   buildFolder,

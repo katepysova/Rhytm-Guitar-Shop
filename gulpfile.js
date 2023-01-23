@@ -155,6 +155,8 @@ const svgSprite = () => {
     .pipe(gulp.dest(path.build.svg));
 };
 
+const fonts = () => gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
+
 const reset = () => deleteAsync(path.clear);
 
 const createGHPages = () => {
@@ -174,9 +176,10 @@ const watcher = () => {
   gulp.watch(path.watch.js, js).on("change", browserSync.reload);
   gulp.watch(path.watch.images, images).on("change", browserSync.reload);
   gulp.watch(path.watch.svg, svgSprite).on("change", browserSync.reload);
+  gulp.watch(path.watch.fonts, fonts).on("change", browserSync.reload);
 };
 
-const mainTask = gulp.parallel(html, style, js, images);
+const mainTask = gulp.parallel(html, fonts, style, js, images);
 const dev = gulp.series(reset, svgSprite, mainTask, watcher);
 const build = gulp.series(reset, svgSprite, mainTask);
 const deploy = createGHPages;
