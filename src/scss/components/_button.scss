@@ -1,0 +1,29 @@
+@import "../variables";
+@import "../mixins";
+@import "../functions";
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: rem(18px) rem(48px);
+    border-radius: rem(40px);
+    font-size: rem(16px);
+    font-weight: 600;
+    line-height: rem(24px);
+    letter-spacing: 0;
+    text-align: center;
+    transition: all 0.4s;
+  }
+
+  &--primary {
+    color: $color-white;
+    background-color: $color-primary;
+
+    &:hover,
+    &:active {
+        background-color: m-darken($color-primary, 20%);
+    }
+  }
+}

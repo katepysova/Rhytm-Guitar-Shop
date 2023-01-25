@@ -1,0 +1,25 @@
+@import "./variables";
+@import "./functions";
+
+.heading-primary {
+  font-family: $font-cal-sans;
+  font-size: rem(56px);
+  font-weight: 600;
+  line-height: rem(67px);
+  letter-spacing: 0;
+  color: $color-black;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: rem(36px);
+    line-height: rem(48px);
+  }
+}
+
+.heading-secondary {
+  font-family: $font-cal-sans;
+  font-size: rem(44px);
+  font-weight: 600;
+  line-height: rem(53px);
+  letter-spacing: 0;
+  color: $color-black;
+}

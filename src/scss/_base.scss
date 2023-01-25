@@ -31,7 +31,6 @@ body {
 }
 
 .wrapper {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -82,5 +81,10 @@ ul {
   @media only screen and (max-width: $bp-small) {
     padding-right: rem(48px);
     padding-left: rem(48px);
+  }
+
+  @media only screen and (max-width: $bp-extra-small) {
+    padding-right: rem(24px);
+    padding-left: rem(24px);
   }
 }
