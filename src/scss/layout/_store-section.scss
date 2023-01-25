@@ -1,0 +1,109 @@
+@import "../variables";
+@import "../mixins";
+@import "../functions";
+
+.store {
+  &__container {
+    padding-top: rem(90px);
+    padding-bottom: rem(90px);
+  }
+
+  &__title {
+    margin-bottom: rem(86px);
+  }
+
+  &__goods {
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: rem(32px);
+    }
+
+    &-header {
+      color: $color-black;
+      font-size: rem(20px);
+      font-weight: 600;
+      line-height: rem(30px);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    &-view-btn {
+      &:link,
+      &:visited {
+        display: inline-block;
+        font-size: rem(20px);
+        font-weight: 500;
+        line-height: rem(30px);
+        letter-spacing: 0;
+        color: $color-light-grey;
+        transition: all 0.4s;
+      }
+
+      &:hover,
+      &:active {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(30px);
+  }
+
+  &__card {
+    &:link,
+    &:visited {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: rem(12px);
+      transition: all 0.4s;
+    }
+
+    &-image {
+      position: relative;
+      margin-bottom: rem(40px);
+      padding-bottom: 52%;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &-content {
+      padding: rem(12px) rem(24px);
+    }
+
+    &-title {
+      @include line-clip(1, $is-flex-item: true);
+
+      font-size: rem(16px);
+      font-weight: 500;
+      line-height: rem(24px);
+      letter-spacing: 0;
+      color: $color-black;
+      margin-bottom: rem(8px);
+    }
+
+    &-price {
+      font-size: rem(14px);
+      font-weight: 400;
+      line-height: rem(21px);
+      color: $color-light-grey;
+    }
+
+    &:hover,
+    &:active {
+      box-shadow: rgb(100 100 111 / 20%) 0 7px 29px 0;
+    }
+  }
+}
