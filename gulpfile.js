@@ -160,7 +160,9 @@ const fonts = () => gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
 const reset = () => deleteAsync(path.clear);
 
 const createGHPages = () => {
-  return gulp.src(path.buildFolder, { allowEmpty: true }).pipe(gulpPages());
+  return gulp
+    .src(`${path.buildFolder}/**/*`, { allowEmpty: true })
+    .pipe(gulpPages());
 };
 
 const watcher = () => {
@@ -182,7 +184,7 @@ const watcher = () => {
 const mainTask = gulp.parallel(html, fonts, style, js, images);
 const dev = gulp.series(reset, svgSprite, mainTask, watcher);
 const build = gulp.series(reset, svgSprite, mainTask);
-const deploy = createGHPages;
+const deploy = gulp.series(build, createGHPages);
 
 gulp.task("dev", dev);
 gulp.task("build", build);
