@@ -1,0 +1,92 @@
+@import "../variables";
+@import "../mixins";
+@import "../functions";
+
+.why {
+  background-color: $color-black;
+
+  &__container {
+    padding-top: rem(90px);
+    padding-bottom: rem(90px);
+  }
+
+  &__title {
+    color: $color-white;
+    margin-bottom: rem(75px);
+
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: rem(48px);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(36px);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: rem(36px);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
+      row-gap: rem(24px);
+    }
+  }
+
+  &__card {
+    padding: rem(36px);
+    border-radius: rem(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: rgba($color-white, 0.15);
+    }
+
+    &-logo {
+      width: rem(72px);
+      height: rem(72px);
+      border-radius: rem(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: rem(40px);
+      background-color: $color-text-grey;
+
+      svg {
+        color: $color-light-grey;
+      }
+    }
+
+    &-title {
+      @include line-clip(1, $is-flex-item: true);
+
+      text-transform: uppercase;
+      color: $color-white;
+      font-size: rem(18px);
+      font-weight: 600;
+      line-height: rem(27px);
+      letter-spacing: 0.08em;
+      margin-bottom: rem(12px);
+    }
+
+    &-description {
+      @include line-clip(3, $is-flex-item: true);
+
+      color: $color-light-grey;
+      flex-grow: 1;
+      font-size: rem(14px);
+      font-weight: 400;
+      line-height: rem(21px);
+      letter-spacing: 0;
+    }
+
+    @media only screen and (max-width: $bp-large-medium) {
+      padding: rem(24px);
+    }
+  }
+}

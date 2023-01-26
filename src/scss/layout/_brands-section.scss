@@ -5,7 +5,7 @@
 .brands {
   &__container {
     padding-top: rem(90px);
-    padding-bottom: rem(90px);
+    padding-bottom: rem(180px);
   }
 
   &__title {
@@ -23,6 +23,13 @@
     row-gap: rem(80px);
     align-items: center;
     justify-items: center;
+    padding-right: rem(56px);
+    padding-left: rem(56px);
+
+    @media only screen and (max-width: $bp-large-medium) {
+      padding-right: 0;
+      padding-left: 0;
+    }
 
     @media only screen and (max-width: $bp-medium) {
       row-gap: rem(36px);
@@ -35,7 +42,7 @@
     }
 
     img {
-      max-width: rem(132px);
+      max-width: 100%;
     }
   }
 }
