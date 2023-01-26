@@ -17,16 +17,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: rem(18px);
       margin-bottom: rem(32px);
     }
 
     &-header {
+      @include line-clip(1, $is-flex-item: true);
+
       color: $color-black;
       font-size: rem(20px);
       font-weight: 600;
       line-height: rem(30px);
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      min-width: 200px;
     }
 
     &-view-btn {
@@ -39,6 +43,7 @@
         letter-spacing: 0;
         color: $color-light-grey;
         transition: all 0.4s;
+        text-align: center;
       }
 
       &:hover,
@@ -52,6 +57,24 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: rem(30px);
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: rem(30px);
+    }
+
+    @media only screen and (max-width: $bp-extra-small) {
+      grid-template-columns: 1fr;
+      row-gap: rem(30px);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(96px);
+
+      @media only screen and (max-width: $bp-small) {
+        margin-bottom: rem(64px);
+      }
+    }
   }
 
   &__card {
@@ -76,6 +99,16 @@
         object-fit: cover;
         height: 100%;
         width: 100%;
+
+        @media only screen and (max-width: $bp-extra-small) {
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+
+      @media only screen and (max-width: $bp-extra-small) {
+        margin-bottom: rem(24px);
+        padding-bottom: 35%;
       }
     }
 
