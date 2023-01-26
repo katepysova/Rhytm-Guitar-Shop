@@ -85,12 +85,13 @@
       overflow: hidden;
       border-radius: rem(12px);
       transition: all 0.4s;
+      padding: rem(12px) rem(24px);
     }
 
     &-image {
       position: relative;
-      margin-bottom: rem(40px);
       padding-bottom: 52%;
+      margin-bottom: rem(12px);
 
       img {
         position: absolute;
@@ -110,10 +111,6 @@
         margin-bottom: rem(24px);
         padding-bottom: 35%;
       }
-    }
-
-    &-content {
-      padding: rem(12px) rem(24px);
     }
 
     &-title {

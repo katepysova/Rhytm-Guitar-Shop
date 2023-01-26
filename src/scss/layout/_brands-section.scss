@@ -1,0 +1,41 @@
+@import "../variables";
+@import "../mixins";
+@import "../functions";
+
+.brands {
+  &__container {
+    padding-top: rem(90px);
+    padding-bottom: rem(90px);
+  }
+
+  &__title {
+    margin-bottom: rem(75px);
+
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: rem(48px);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: rem(24px);
+    row-gap: rem(80px);
+    align-items: center;
+    justify-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      row-gap: rem(36px);
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      row-gap: rem(36px);
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    img {
+      max-width: rem(132px);
+    }
+  }
+}
