@@ -12,7 +12,7 @@ $bp-swiper-extra-small: 450px;
     position: relative;
 
     @media only screen and (max-width: $bp-large-medium) {
-      padding-top: rem(90px);
+      padding-top: rem(180px);
       padding-bottom: rem(90px);
     }
   }
@@ -20,7 +20,7 @@ $bp-swiper-extra-small: 450px;
   &__title {
     margin-bottom: rem(110px);
 
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-large-medium) {
       margin-bottom: rem(75px);
     }
 
