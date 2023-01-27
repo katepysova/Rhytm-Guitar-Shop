@@ -1,9 +1,11 @@
 .swiper {
   width: 100%;
   height: 100%;
+  padding: rem(16px) !important;
 }
 
 .swiper-slide {
+  height: auto !important;
   display: -webkit-box;
   display: flexbox;
   display: flex;
@@ -13,5 +15,9 @@
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: stretch;
+}
+
+.swiper-content {
+  height: 100% !important;
 }

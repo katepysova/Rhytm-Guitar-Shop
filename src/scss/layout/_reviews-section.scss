@@ -9,10 +9,20 @@ $bp-swiper-extra-small: 450px;
   &__container {
     padding-top: rem(240px);
     padding-bottom: rem(120px);
+    position: relative;
+
+    @media only screen and (max-width: $bp-large-medium) {
+      padding-top: rem(90px);
+      padding-bottom: rem(90px);
+    }
   }
 
   &__title {
     margin-bottom: rem(110px);
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: rem(75px);
+    }
 
     @media only screen and (max-width: $bp-small) {
       margin-bottom: rem(48px);
@@ -21,6 +31,7 @@ $bp-swiper-extra-small: 450px;
 
   &__review {
     width: 100%;
+    border-radius: rem(12px);
     display: grid;
     grid-template-columns: 0.503fr 0.497fr;
     column-gap: rem(146px);
@@ -35,7 +46,9 @@ $bp-swiper-extra-small: 450px;
 
     @media only screen and (max-width: $bp-medium) {
       grid-template-columns: 1fr;
-      row-gap: rem(48px);
+      row-gap: rem(36px);
+      padding: rem(32px) rem(24px);
+      box-shadow: rgb(149 157 165 / 20%) 0 8px 10px;
     }
 
     &-image {
@@ -66,11 +79,6 @@ $bp-swiper-extra-small: 450px;
           }
 
           @media only screen and (max-width: $bp-extra-small) {
-            width: rem(200px);
-            height: rem(200px);
-          }
-
-          @media only screen and (max-width: $bp-extra-small) {
             display: none;
           }
         }
@@ -91,8 +99,8 @@ $bp-swiper-extra-small: 450px;
         }
 
         @media only screen and (max-width: $bp-extra-small) {
-          width: rem(240px);
-          height: rem(240px);
+          width: rem(200px);
+          height: rem(200px);
         }
       }
 
@@ -122,6 +130,15 @@ $bp-swiper-extra-small: 450px;
       letter-spacing: 0;
       color: $color-text-grey;
       margin-bottom: rem(56px);
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: rem(36px);
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: rem(18px);
+        line-height: rem(32px);
+      }
     }
 
     &-author {
@@ -131,6 +148,11 @@ $bp-swiper-extra-small: 450px;
       line-height: rem(38px);
       letter-spacing: 0;
       margin-bottom: rem(8px);
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: rem(18px);
+        line-height: rem(24px);
+      }
     }
 
     &-career {
@@ -139,6 +161,41 @@ $bp-swiper-extra-small: 450px;
       font-weight: 500;
       line-height: rem(29px);
       letter-spacing: 0.08em;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: rem(14px);
+        line-height: rem(18px);
+        letter-spacing: 0.04em;
+      }
+    }
+  }
+
+  &__pagination.swiper-my-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: absolute;
+    bottom: rem(40px);
+    left: auto;
+    top: auto;
+    right: rem(120px);
+    width: auto;
+
+    .swiper-pagination-bullet {
+      margin: 0 rem(5px);
+      width: rem(10px);
+      height: rem(16px);
+      border-radius: rem(20px);
+      background-color: $color-text-grey;
+      transition: all 0.4s;
+
+      &.swiper-pagination-bullet-active {
+        background-color: $color-primary;
+        transform: rotate(270deg);
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      right: 50%;
+      bottom: rem(40px);
+      transform: translateX(50%);
     }
   }
 }

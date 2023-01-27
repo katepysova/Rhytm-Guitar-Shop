@@ -21,13 +21,20 @@ window.addEventListener("resize", () => {
   }
 });
 
-// eslint-disable-next-line no-unused-vars
-const swiper = new Swiper(".swiper.reviews__swiper", {
-  modules: [Pagination],
-  slidesPerView: 1,
-  loop: true,
-  pagination: {
-    el: ".swiper-my-pagination",
-    clickable: true,
-  },
-});
+const reviewsSwiper = document.querySelector(".swiper.reviews__swiper");
+
+if (reviewsSwiper) {
+  // eslint-disable-next-line no-unused-vars
+  const swiper = new Swiper(reviewsSwiper, {
+    modules: [Pagination],
+    slidesPerView: 1,
+    effect: "fade",
+    mousewheel: true,
+    spaceBetween: 36,
+    loop: true,
+    pagination: {
+      el: ".swiper-my-pagination",
+      clickable: true,
+    },
+  });
+}
