@@ -1,0 +1,107 @@
+@import "../variables";
+@import "../mixins";
+@import "../functions";
+
+$color-footer-background: #eee;
+
+.footer {
+  background-color: $color-footer-background;
+
+  &__container {
+    padding-top: rem(60px);
+    padding-bottom: rem(60px);
+  }
+
+  &__content {
+    margin-bottom: rem(80px);
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    column-gap: rem(100px);
+
+    @media only screen and (max-width: $bp-large-medium) {
+      column-gap: rem(80px);
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      row-gap: rem(48px);
+      column-gap: rem(60px);
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: $bp-extra-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__logo {
+    &:link,
+    &:visited {
+      margin-bottom: rem(28px);
+    }
+
+    &-image {
+      max-width: rem(210px);
+    }
+  }
+
+  &__contacts {
+    margin-top: rem(28px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+
+    &-link {
+      &:link,
+      &:visited {
+        display: flex;
+        align-items: center;
+        gap: rem(20px);
+      }
+    }
+  }
+
+  &__col {
+    &-title {
+      color: $color-black;
+      font-size: rem(18px);
+      font-weight: 600;
+      line-height: rem(27px);
+      letter-spacing: 0;
+      text-align: left;
+      text-transform: uppercase;
+      margin-bottom: rem(20px);
+    }
+
+    &--4 {
+      @media only screen and (max-width: $bp-medium) {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+      }
+
+      @media only screen and (max-width: $bp-extra-small) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16px);
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: rem(35px);
+  }
+
+  &__copyright {
+    font-size: rem(16px);
+    font-weight: 400;
+    line-height: rem(26px);
+    letter-spacing: 0;
+  }
+}

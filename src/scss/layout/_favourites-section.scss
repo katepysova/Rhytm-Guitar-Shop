@@ -11,17 +11,17 @@
     column-gap: rem(120px);
 
     @media only screen and (max-width: $bp-large) {
-        column-gap: rem(80px);
+      column-gap: rem(80px);
     }
 
     @media only screen and (max-width: $bp-large-medium) {
-        row-gap: rem(48px);
-        grid-template-columns: 0.55fr 0.45fr;
+      row-gap: rem(48px);
+      grid-template-columns: 0.55fr 0.45fr;
     }
 
     @media only screen and (max-width: $bp-medium) {
-        row-gap: rem(48px);
-        grid-template-columns: 1fr;
+      row-gap: rem(48px);
+      grid-template-columns: 1fr;
     }
   }
 
@@ -33,10 +33,9 @@
     margin-bottom: rem(60px);
 
     @media only screen and (max-width: $bp-medium) {
-        text-align: center;
+      text-align: center;
     }
   }
-
 
   &__links {
     display: flex;
@@ -46,7 +45,7 @@
     max-width: rem(389px);
 
     @media only screen and (max-width: $bp-medium) {
-       margin: 0 auto;
+      margin: 0 auto;
     }
   }
 
@@ -54,22 +53,21 @@
     display: block;
 
     img {
+      height: rem(57px);
+      display: block;
+
+      @media only screen and (max-width: $bp-large-medium) {
+        height: rem(48px);
+      }
+
+      @media only screen and (max-width: $bp-medium) {
         height: rem(57px);
-        display: block;
+      }
 
-        @media only screen and (max-width: $bp-large-medium) {
-            height: rem(48px);
-        }
-
-        @media only screen and (max-width: $bp-medium) {
-            height: rem(57px);
-        }
-
-        @media only screen and (max-width: $bp-medium) {
-            height: rem(38px);
-        }
+      @media only screen and (max-width: $bp-medium) {
+        height: rem(38px);
+      }
     }
-
   }
 
   &__image {
@@ -77,18 +75,17 @@
     padding-bottom: m-percentage(533px, 569px);
     position: relative;
 
-    
     img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
     }
 
     @media only screen and (max-width: $bp-medium) {
-       padding-bottom: 70%;
+      padding-bottom: 70%;
     }
   }
 }
