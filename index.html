@@ -34,13 +34,13 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link link" href="#"> Store </a>
+                <a class="nav__link link" href="#store"> Store </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link link" href="#"> Collections </a>
+                <a class="nav__link link" href="#categories"> Collections </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link link" href="#"> Support </a>
+                <a class="nav__link link" href="#why"> Support </a>
               </li>
             </ul>
           </nav>
@@ -82,7 +82,7 @@
             </div>
           </div>
         </section>
-        <section class="store">
+        <section class="store" id="store">
           <div class="store__container container">
             <h2 class="store__title heading-secondary u-center">
               Check out the <span class="u-highlighten">Store</span>
@@ -161,7 +161,7 @@
             </div>
           </div>
         </section>
-        <section class="categories">
+        <section class="categories" id="categories">
           <div class="categories__container container">
             <h2 class="categories__title heading-secondary u-center">
               Choose based on <span class="u-highlighten">Categories</span>
@@ -243,7 +243,7 @@
             </div>
           </div>
         </section>
-        <section class="why">
+        <section class="why" id="why">
           <div class="why__container container">
             <h2 class="why__title heading-secondary u-center">
               Why try <span class="u-highlighten">Rhythm?</span>
@@ -454,17 +454,103 @@
               </div>
             </div>
             <div class="favourites__image">
-
-           
- <picture><source srcset="./images/fav.webp" type="image/webp"><img src="./images/fav.png" alt="guitars on the screen"></picture>
+              <picture><source srcset="./images/fav.webp" type="image/webp"><img src="./images/fav.png" alt="guitars on the screen" /></picture>
             </div>
-       
-             
           </div>
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__container container">footer</div>
+        <div class="footer__container container">
+          <div class="footer__content">
+            <div class="footer__col footer__col--1">
+              <a class="footer__logo nav__link" href="#">
+                <img
+                  class="footer__logo-image"
+                  src="./images/footer-logo.png"
+                  alt="logo"
+                />
+              </a>
+              <ul class="footer__contacts">
+                <li class="footer__contacts-item">
+                  <a
+                    class="footer__contacts-link"
+                    href="mailto:enquiry@rhythm.com"
+                  >
+                    <svg>
+                      <use href="./icons/sprite.svg#sms"></use>
+                    </svg>
+                    enquiry@rhythm.com
+                  </a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a
+                    class="footer__contacts-link"
+                    href="mailto:enquiry@rhythm.com"
+                  >
+                    <svg>
+                      <use href="./icons/sprite.svg#location"></use>
+                    </svg>
+                    San Francisco
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--2">
+              <h4 class="footer__col-title">Pages</h4>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__link nav__link" href="#store"> Store </a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link nav__link" href="#categories">
+                    Collections
+                  </a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link nav__link" href="#why"> Support </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--3">
+              <h4 class="footer__col-title">Product</h4>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__link" href="#"> Terms </a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link" href="#"> Privacy Policy </a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link" href="#"> Copyright </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--4">
+              <h4 class="footer__col-title">Follow us</h4>
+              <div class="footer__socials">
+                <a class="footer__socials-link" href="#">
+                  <svg>
+                    <use href="./icons/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+                <a class="footer__socials-link" href="#">
+                  <svg>
+                    <use href="./icons/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+                <a class="footer__socials-link" href="#">
+                  <svg>
+                    <use href="./icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright u-center">
+            &copy; <span class="footer__copyright-year">2023</span> Copyright.
+            Rhythm
+          </div>
+        </div>
       </footer>
     </div>
     <script src="./js/script.js"></script>
